@@ -1,0 +1,14 @@
+{
+	"name": "kmelkon.seti-syntax",
+	"title": "Seti Syntax",
+	"description": "This theme is a port of Seti Syntax for Atom.io",
+	"homepage": "https://github.com/kmelkon/seti-sytanx-brackets",
+	"version": "1.0.0",
+	"author" : "Karam Melkon <kmelkon@gmail.com> (http://kmelkon.com)",
+	"license": "MIT",
+	"theme": {
+		"file": "theme.less",
+		"dark": true
+	},
+	"keywords": ["theme"]
+}

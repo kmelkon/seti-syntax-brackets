@@ -1,0 +1,122 @@
+/*
+ * Brackets Seti Syntax Theme
+ */
+
+/* Define some variables used in multiple places */
+
+@background: #151718;
+@foreground: #858d8a;
+@numbers-bar: #0e1112;
+
+
+/* GUTTER */
+@gutter-text: #404b53;
+@gutter-text-highlight: #50b4dd;
+
+
+/* CODE VIEW */
+
+@code-font-color: rgb(212,215,214); // default editor text
+
+/* COLORS */
+
+@blue: #55b5db;
+@green: #9fca56;
+@yellow: #e6cd69;
+@red: #cd3f45;
+@purple: #a074c4;
+@gray: #858d8a;
+
+/* Code Styling */
+
+.CodeMirror, .CodeMirror-scroll {
+	background-color: @background;
+	color: @foreground;
+}
+
+.CodeMirror-focused .CodeMirror-activeline-background {
+    background: @numbers-bar;
+}
+&.show-line-padding .CodeMirror-focused .CodeMirror-activeline-background {
+    box-shadow: inset 15px 0 0 0 #000;
+}
+.CodeMirror-focused .CodeMirror-activeline {
+    .CodeMirror-gutter-elt {
+        background: #060708;
+        color: #fff;
+    }
+    .inline-widget .CodeMirror-gutter-elt {
+        color: #e01818;    
+    	
+	}
+}
+
+
+
+.CodeMirror-cursor {
+    border-left: 2px solid @code-font-color !important;
+}
+ 
+.cm-string, .cm-string-2, .cm-hr {color: @blue;}
+.cm-atom { color: @red;}
+.cm-variable-2, .cm-variable, .cm-variable-3, .cm-operator, .cm-meta, .cm-bracket { color: @green;}
+.cm-keyword, .cm-qualifier, .cm-builtin, .cm-tag, .cm-quote { color: @blue !important;}
+
+.cm-comment {color: #41535b;}
+.cm-error, .cm-minus {color: @red;}
+
+//.cm-header {color: #d85896;}
+//.cm-link {color: #b77fdb; text-decoration: none;}
+//.cm-rangeinfo {color: #6c71c4;}
+
+.CodeMirror-linenumber {
+    color: @gutter-text;
+	background-color: @numbers-bar;
+}
+
+.CodeMirror-gutters {
+    background-color: @numbers-bar;
+    border-right: none;
+}
+
+.CodeMirror-focused .CodeMirror-activeline .CodeMirror-gutter-elt {
+    color: @gutter-text-highlight;
+	
+}
+
+.CodeMirror-matchingbracket, .CodeMirror-matchingtag {	
+    /* Ensure visibility against gray inline editor background */
+    background-color: transparent !important;
+	border-bottom: 1px solid @blue;
+	color: @gray !important;
+	
+}
+
+.CodeMirror .CodeMirror-selected {
+    background: #5c5c5c;
+}
+.CodeMirror-focused .CodeMirror-selected {
+    background: #5c5c5c;
+}
+
+.CodeMirror-searching {
+    background-color: transparent;
+	color: inherit !important;
+	border: 1px solid @blue;
+    &.searching-current-match {
+        background-color: @gray;
+		border: 1px solid @blue;
+    }
+}
+
+/* Non-editor styling */
+
+#image-holder,
+#not-editor {
+    background-color: @background;
+}
+
+
+#image-holder {
+    color: @foreground;
+}
